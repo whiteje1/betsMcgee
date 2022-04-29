@@ -59,7 +59,7 @@ class loginPage(App):
         )
         submit = Button(
             text = 'Submit',
-            on_press=self.submit,
+            # on_press=self.submit,
             size_hint =(None, None),
             height = 30,
             width = 70

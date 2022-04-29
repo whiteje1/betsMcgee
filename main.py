@@ -7,7 +7,7 @@ from classes.loginPage import loginPage
 
 class betsApp(App):
     def build(self):
-        print(loginPage.submit(self))
+        # print(loginPage.submit(self))
         return loginPage.buildLogin(self)
 
 betsApp().run()
