@@ -1,0 +1,56 @@
+<LoginControl>:
+    cols: 1
+    row_force_default: True
+    row_default_height: '32dp'
+    size_hint_y: None
+    height: self.minimum_height
+
+    userid: userid
+    userpw: userpw
+
+    BoxLayout:
+        size_hint_y: None
+        height: '32dp'
+        Label:
+            text: 'User ID'
+
+        TextInput:
+            id: userid
+            text: 'some password'
+
+    BoxLayout:
+        size_hint_y: None
+        height: '32dp'
+        Label:
+            text: 'Password'
+
+        TextInput:
+            id: userpw
+            password: True
+            text: 'some password'
+
+    AnchorLayout:
+        size_hint_x: None
+        width: 100
+        Button:
+            text: 'Login'
+            on_press: root.login_pressed(self)
+            size_hint_y: None
+            height: '32dp'
+            pos_hint: {'top': 0.5}
+
+
+    AnchorLayout:
+        size_hint_x: None
+        width: 100
+        Button:
+            text: 'Close'
+            on_press: root.close_pressed(self)
+            size_hint_y: None
+            height: '32dp'
+
+
+
+<AfterLogin>:
+    rows: 1
+    Label:
